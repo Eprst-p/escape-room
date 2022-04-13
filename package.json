@@ -9,6 +9,8 @@
     "webpack": "^5.72.0"
   },
   "devDependencies": {
+    "@types/react-router-dom": "^5.3.3",
+    "@types/styled-components": "^5.1.25",
     "concurrently": "6.3.0",
     "joi": "17.4.2",
     "json-server": "0.17.0",

@@ -7,12 +7,14 @@ import { ReactComponent as IconScifi } from 'assets/img/icon-scifi.svg';
 import { ReactComponent as IconPerson } from 'assets/img/icon-person.svg';
 import { ReactComponent as IconPuzzle } from 'assets/img/icon-puzzle.svg';
 import * as S from './quests-catalog.styled';
+import React from 'react';
+
 
 const QuestsCatalog = () => (
   <>
     <S.Tabs>
       <S.TabItem>
-        <S.TabBtn isActive>
+        <S.TabBtn /*isActive*/>
           <IconAllQuests />
           <S.TabTitle>Все квесты</S.TabTitle>
         </S.TabBtn>

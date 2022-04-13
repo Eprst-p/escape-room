@@ -1,7 +1,11 @@
 import React from 'react';
 import * as S from './button.styled';
 
-const Button = ({ children, ...props }) => (
+type ButtonProps = {
+  children: JSX.Element;
+}
+
+const Button = ({ children, ...props }:ButtonProps) => (
   <S.Button {...props}>{children}</S.Button>
 );
 

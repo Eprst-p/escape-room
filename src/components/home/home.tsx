@@ -6,6 +6,8 @@ import {
 } from 'components/common/common';
 import { QuestsCatalog } from './components/components';
 import * as S from './home.styled';
+import React from 'react';
+
 
 const HomePage = () => (
   <MainLayout>

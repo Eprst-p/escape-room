@@ -9,6 +9,7 @@ import Contacts from 'components/contacts/contacts';
 import Home from 'components/home/home';
 import { appTheme } from './common';
 import * as S from './app.styled';
+import React from 'react';
 
 const App = () => (
   <ThemeProvider theme={appTheme}>
