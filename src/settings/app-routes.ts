@@ -1,6 +1,6 @@
 export enum AppRoute {
   Root = '/',
-  Catalog = '/catalog',
+  Catalog = '/',
   Quest = '/quest',
   Contacts = '/contacts',
   NotFound = '/not-found'
