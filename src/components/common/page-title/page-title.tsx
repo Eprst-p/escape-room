@@ -1,8 +1,11 @@
 import * as S from './page-title.styled';
-import React from 'react';
+
+type PageTitleProps = {
+  children: string;
+}
 
 
-const PageTitle = ({ children, ...props }) => (
+const PageTitle = ({ children, ...props } :PageTitleProps) => (
   <S.PageTitle {...props}>{children}</S.PageTitle>
 );
 

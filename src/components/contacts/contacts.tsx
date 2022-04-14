@@ -1,7 +1,6 @@
 import { MainLayout, PageTitle, PageSubtext } from 'components/common/common';
 import contactsMap from 'assets/img/contacts-map.jpg';
 import * as S from './contacts.styled';
-import React from 'react';
 
 
 const Contacts = () => (

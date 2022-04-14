@@ -1,8 +1,10 @@
-import React from 'react';
+import { MouseEventHandler } from 'react';
 import * as S from './button.styled';
 
 type ButtonProps = {
-  children: JSX.Element;
+  children: string;
+  type: 'button' | 'submit' | 'reset' | undefined,
+  onClick?: MouseEventHandler,
 }
 
 const Button = ({ children, ...props }:ButtonProps) => (

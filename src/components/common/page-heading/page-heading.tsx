@@ -1,8 +1,10 @@
 import * as S from './page-heading.styled';
-import React from 'react';
 
+type PageHeadingProps = {
+  children: JSX.Element[];
+}
 
-const PageHeading = ({ children, ...props }) => (
+const PageHeading = ({ children, ...props }: PageHeadingProps) => (
   <S.PageHeading {...props}>{children}</S.PageHeading>
 );
 

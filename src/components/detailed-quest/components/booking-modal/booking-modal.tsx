@@ -1,7 +1,5 @@
 import * as S from './booking-modal.styled';
-import { ReactComponent as IconClose } from 'assets/img/icon-close.svg';
-import React from 'react';
-
+import IconClose from 'assets/img/icon-close.svg';
 
 const BookingModal = () => (
   <S.BlockLayer>

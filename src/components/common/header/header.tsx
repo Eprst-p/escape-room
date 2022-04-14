@@ -1,6 +1,5 @@
 import logo from 'assets/img/logo.svg';
 import * as S from './header.styled';
-import React from 'react';
 
 interface LinkProps {
   $isActiveLink: boolean,

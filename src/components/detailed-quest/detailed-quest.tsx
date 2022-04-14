@@ -1,11 +1,10 @@
 import { useState } from 'react';
 import { MainLayout } from 'components/common/common';
-import { ReactComponent as IconClock } from 'assets/img/icon-clock.svg';
-import { ReactComponent as IconPerson } from 'assets/img/icon-person.svg';
-import { ReactComponent as IconPuzzle } from 'assets/img/icon-puzzle.svg';
+import IconClock from 'assets/img/icon-clock.svg';
+import IconPerson from 'assets/img/icon-person.svg';
+import IconPuzzle from 'assets/img/icon-puzzle.svg';
 import * as S from './detailed-quest.styled';
 import { BookingModal } from './components/components';
-import React from 'react';
 
 
 const DetailedQuest = () => {
