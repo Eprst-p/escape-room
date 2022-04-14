@@ -7,17 +7,20 @@ import {ReactComponent as IconScifi} from 'assets/img/icon-scifi.svg';
 import {ReactComponent as IconPerson} from 'assets/img/icon-person.svg';
 import {ReactComponent as IconPuzzle} from 'assets/img/icon-puzzle.svg';
 import * as S from './quests-catalog.styled';
-import React from 'react';
-import { themeNames, questTypes } from '../../../../settings/theme-names';
-import { useAppSelector } from '../../../../hooks/redux-hooks';
-import { getActiveTheme, getQuestsByTheme } from '../../../../store/selectors';
-import { ApiRoute } from '../../../../settings/api-routes';
+import React, { useCallback } from 'react';
+import { themeNames, questTypes } from 'settings/theme-names';
+import { useAppDispatch, useAppSelector } from 'hooks/redux-hooks';
+import { getActiveTheme, getQuestsByTheme } from 'store/selectors';
+import { ApiRoute } from 'settings/api-routes';
 import { generatePath } from 'react-router-dom';
-import { hardLvls } from '../../../../settings/quest-hard-lvls';
-import { QuestTheme } from '../../../../settings/quest-themes';
+import { hardLvls } from 'settings/quest-hard-lvls';
+import { QuestTheme } from 'settings/quest-themes';
+import { changeTheme } from 'store/interface-process/interface-process';
 
 
 const QuestsCatalog = () => {
+  const dispatch = useAppDispatch();
+
   const activeTheme = useAppSelector(getActiveTheme);
   const quests = useAppSelector(getQuestsByTheme);
 
@@ -30,6 +33,9 @@ const QuestsCatalog = () => {
     [QuestTheme.SciFi]: <IconScifi />,
   }
 
+  const handleOnThemeClick = (theme: string) => dispatch(changeTheme(theme));
+
+
  // isActive - пока хрен знает как пофиксить типы
 
   return (
@@ -39,7 +45,7 @@ const QuestsCatalog = () => {
                 questTypes.map((type) =>
                   (
                   <S.TabItem key={type}>
-                    <S.TabBtn  isActive={activeTheme === type ?  true : false}>
+                    <S.TabBtn  isActive={activeTheme === type ?  true : false} onClick={() => handleOnThemeClick(type)} >
                       {themeIcons[type]}
                       <S.TabTitle>{themeNames[type]}</S.TabTitle>
                     </S.TabBtn>
