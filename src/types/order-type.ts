@@ -1,8 +1,7 @@
-export type QuestType = {
+export type OrderType = {
   name: string
   peopleCount: number
   phone: string
   isLegal: boolean,
 }
 
-export type QuestTypes = QuestType[];
