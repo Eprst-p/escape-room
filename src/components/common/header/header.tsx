@@ -1,4 +1,5 @@
 import logo from 'assets/img/logo.svg';
+import { AppRoute } from '../../../settings/app-routes';
 import * as S from './header.styled';
 
 interface LinkProps {
@@ -16,9 +17,7 @@ const Header = () => (
       <S.Navigation>
         <S.Links>
           <S.LinkItem>
-            <S.Link /*$isActiveLink*/ to="/">
-              Квесты
-            </S.Link>
+            <S.Link $isActiveLink to={AppRoute.Catalog}>Квесты</S.Link>
           </S.LinkItem>
 
           <S.LinkItem>
@@ -34,7 +33,7 @@ const Header = () => (
           </S.LinkItem>
 
           <S.LinkItem>
-            <S.Link to="/contacts">Контакты</S.Link>
+            <S.Link to={AppRoute.Contacts}>Контакты</S.Link>
           </S.LinkItem>
         </S.Links>
       </S.Navigation>

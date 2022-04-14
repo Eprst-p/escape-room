@@ -36,7 +36,7 @@ const TabItem = styled.li`
   }
 `;
 
-const TabBtn = styled.button.attrs({ type: 'button' })`
+const TabBtn = styled.button.attrs({ type: 'button'})`
   display: flex;
   align-items: center;
   padding: 0;
