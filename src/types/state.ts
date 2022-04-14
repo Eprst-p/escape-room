@@ -9,7 +9,6 @@ export type DataProcess = {
 };
 
 export type InterfaceProcess = {
-  questThemes: string[];
   activeTheme: string;
 };
 

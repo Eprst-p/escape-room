@@ -1,11 +1,11 @@
 import {createSlice} from '@reduxjs/toolkit';
 import {NameSpace} from '../../settings/name-space';
+import { QuestTheme } from '../../settings/quest-themes';
 import {InterfaceProcess} from '../../types/state';
 
 
 const initialState: InterfaceProcess = {
-  questThemes: ['Все квесты', 'Приключения', 'Ужасы', 'Мистика', 'Детектив', 'Sci-fi'],
-  activeTheme: 'Все квесты',
+  activeTheme: QuestTheme.AllQuests,
 };
 
 export const interfaceProcess = createSlice({

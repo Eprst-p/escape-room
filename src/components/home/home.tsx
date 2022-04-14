@@ -8,12 +8,12 @@ import { QuestsCatalog } from './components/components';
 import * as S from './home.styled';
 import React from 'react';
 import { useAppSelector } from '../../hooks/redux-hooks';
-import { getQuests } from '../../store/selectors';
+import { getAllQuests } from '../../store/selectors';
 
 
 const HomePage = () => {
 
-  const quests = useAppSelector(getQuests);
+  const quests = useAppSelector(getAllQuests);
   console.log(quests);
 
   return (

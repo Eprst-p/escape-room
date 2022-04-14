@@ -1,9 +1,11 @@
 import {State} from '../types/state'
-// import {SortOption} from '../settings/sort-options';
-// import {sortByLowerPrice, sortByHigherPrice, sortByTopRate} from '../components/main-screen/sort-variants';
-// import {createSelector} from 'reselect';
-// import {sortByNewerDate} from '../components/property-screen/sort-commets';
-// import {CommentsAmount} from '../settings/comments-settings';
+import {createSelector} from 'reselect';
+
+export const getAllQuests = (state:State) => state.DATA.quests;
+export const getQuest = (state:State) => state.DATA.quest;
+export const getQuestID = (state:State) => state.DATA.questID;
+
+export const getActiveTheme = (state:State) => state.INTERFACE.activeTheme;
+export const getQuestsByTheme = createSelector(getAllQuests, getActiveTheme, (allQuests, activeTheme) => allQuests.filter((quest) => quest.type === activeTheme));
 
 
-export const getQuests = (state:State) => state.DATA.quests;

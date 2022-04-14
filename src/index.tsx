@@ -5,7 +5,7 @@ import { store } from './store';
 import {Provider} from 'react-redux';
 import { fetchQuests } from './store/api-actions';
 import { useAppSelector } from './hooks/redux-hooks';
-import { getQuests } from './store/selectors';
+import { getAllQuests } from './store/selectors';
 
 store.dispatch(fetchQuests());
 
