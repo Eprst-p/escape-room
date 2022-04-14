@@ -7,27 +7,36 @@ import {
 import DetailedQuest from 'components/detailed-quest/detailed-quest';
 import Contacts from 'components/contacts/contacts';
 import Home from 'components/home/home';
+import NotFound404 from '../not-found/not-found';
 import { appTheme } from './common';
 import * as S from './app.styled';
 import React from 'react';
+import { AppRoute } from '../../settings/app-routes';
 
-const App = () => (
-  <ThemeProvider theme={appTheme}>
-    <S.GlobalStyle />
-    <Router>
-      <Switch>
-        <Route exact path="/quest">
-          <DetailedQuest />
-        </Route>
-        <Route exact path="/contacts">
-          <Contacts />
-        </Route>
-        <Route path="/">
-          <Home />
-        </Route>
-      </Switch>
-    </Router>
-  </ThemeProvider>
-);
+
+const App = () => {
+
+  return (
+    <ThemeProvider theme={appTheme}>
+      <S.GlobalStyle />
+      <Router>
+        <Switch>
+          <Route exact path={AppRoute.Quest}>
+            <DetailedQuest />
+          </Route>
+          <Route exact path={AppRoute.Contacts}>
+            <Contacts />
+          </Route>
+          <Route path={AppRoute.Catalog}>
+            <Home />
+          </Route>
+          <Route path="*">
+            <NotFound404 />
+          </Route>
+        </Switch>
+      </Router>
+    </ThemeProvider>
+  );
+};
 
 export default App;
