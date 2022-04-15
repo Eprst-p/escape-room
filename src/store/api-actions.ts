@@ -26,7 +26,7 @@ export const fetchQuest = createAsyncThunk(
   async (id: number) => {
     try {
       const {data} = await api.get<QuestType>(generatePath(ApiRoute.Quest, {id: `${id}`}));
-      await setPromiseWaiter(500);
+      await setPromiseWaiter();
       store.dispatch(loadQuest(data));
     } catch (error) {
       console.log(error);

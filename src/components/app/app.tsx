@@ -38,10 +38,10 @@ const App = () => {
           <Route exact path={AppRoute.Contacts}>
             <Contacts />
           </Route>
-          <Route path={AppRoute.Catalog}>
+          <Route exact path={AppRoute.Catalog}>
             <Home />
           </Route>
-          <Route path="*">
+          <Route exact path="*">
             <NotFound404 />
           </Route>
         </Switch>

@@ -1,6 +1,7 @@
 import {Link} from 'react-router-dom';
 import {AppRoute} from '../../settings/app-routes';
 
+
 function NotFound404(): JSX.Element {
   return (
   <div className="page404_container">
