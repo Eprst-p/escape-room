@@ -13,9 +13,6 @@ import { getAllQuests } from '../../store/selectors';
 
 const HomePage = () => {
 
-  const quests = useAppSelector(getAllQuests);
-  console.log(quests);
-
   return (
     <MainLayout>
       <S.Main forwardedAs="main">
