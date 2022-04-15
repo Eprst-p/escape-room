@@ -14,5 +14,7 @@ export const getQuestsByTheme = createSelector(getAllQuests, getActiveTheme, (al
   }
   return allQuests.filter((quest) => quest.type === activeTheme);
 });
+export const getBookingModalStatus = (state:State) => state.INTERFACE.bookingModalStatus;
+
 
 

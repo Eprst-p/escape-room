@@ -11,16 +11,19 @@ import { fetchQuest } from 'store/api-actions';
 import { getQuest } from 'store/selectors';
 import { hardLvls } from 'settings/quest-hard-lvls';
 import LoadingScreen from '../loading-screen/loading-screen';
+import { getBookingModalStatus } from '../../store/selectors';
+import { setBookingModalStatus } from '../../store/interface-process/interface-process';
+import { QuestType } from '../../types/quest-type';
 
 
 const DetailedQuest = () => {
   const dispatch = useAppDispatch();
   const {id} = useParams();
-  const [isBookingModalOpened, setIsBookingModalOpened] = useState(false);
-  const quest = useAppSelector(getQuest);
+  const quest:QuestType = useAppSelector(getQuest);
+  const isBookingModalOpened = useAppSelector(getBookingModalStatus)
 
   const onBookingBtnClick = () => {
-    setIsBookingModalOpened(true);
+    dispatch(setBookingModalStatus(true))
   };
 
   useEffect(() => {
@@ -74,7 +77,7 @@ const DetailedQuest = () => {
           </S.PageDescription>
         </S.PageContentWrapper>
 
-        {isBookingModalOpened && <BookingModal />}
+        {isBookingModalOpened && <BookingModal peopleCount={quest.peopleCount} />}
       </S.Main>
     </MainLayout>
   );

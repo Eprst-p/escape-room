@@ -10,6 +10,7 @@ export type DataProcess = {
 
 export type InterfaceProcess = {
   activeTheme: string;
+  bookingModalStatus: boolean;
 };
 
 export type State = ReturnType<typeof store.getState>;

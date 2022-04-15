@@ -40,7 +40,6 @@ export const orderAction = createAsyncThunk(
     try {
       await api.post<OrderType>(ApiRoute.Orders, order);
       await setPromiseWaiter();
-      console.log(order);
     } catch (error) {
       console.log(error);
     }

@@ -6,6 +6,7 @@ import {InterfaceProcess} from '../../types/state';
 
 const initialState: InterfaceProcess = {
   activeTheme: QuestTheme.AllQuests,
+  bookingModalStatus: false,
 };
 
 export const interfaceProcess = createSlice({
@@ -13,7 +14,8 @@ export const interfaceProcess = createSlice({
   initialState,
   reducers: {
     changeTheme: (state, {payload}) => {state.activeTheme = payload},
+    setBookingModalStatus: (state, {payload}) => {state.bookingModalStatus = payload},
   },
 });
 
-export const {changeTheme} = interfaceProcess.actions;
+export const {changeTheme, setBookingModalStatus} = interfaceProcess.actions;
