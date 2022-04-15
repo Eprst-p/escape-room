@@ -4,16 +4,16 @@ import {Icon} from 'leaflet';
 export const Coordinates: CoordinatesType = {
   Latitude: 59.968137,
   Longitude: 30.316272,
-  Zoom: 10,
+  Zoom: 17,
 } as const;
 
-export const Pin = new Icon({
-  iconUrl: 'assets/img/pin.svg',
+export const pin = new Icon({
+  iconUrl: '/img/pin.svg',
   iconSize: [25, 35],
   iconAnchor: [20, 35]
 });
 
 export enum MapProportion {
-  Width = '649',
-  Height = '336'
+  Width = '649px',
+  Height = '336px'
 }

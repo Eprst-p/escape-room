@@ -1,28 +1,38 @@
 import { useRef } from 'react';
 import useMap from '../../hooks/useMap';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+import { ContactData } from '../../settings/contact-data';
+import { MapProportion } from '../../settings/map-settings';
+import contactsMap from 'assets/img/contacts-map.jpg';
+import * as S from './contacts.styled';
 
-type MapProps = {
-  width: string;
-  height: string,
-}
 
-const Map = ({width, height}:MapProps) => {
+const Map = () => {
   const mapRef = useRef(null);
   useMap(mapRef);
 
   return (
-    <div
-      style={{
-        height: height,
-        width: width,
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        display: 'block'
-      }}
-      ref={mapRef}
-    />
+    <>
+    {
+      mapRef === null
+      ?
+      <S.ContactsMapImage
+        src={contactsMap}
+        alt={`мы находимся по адресу ${ContactData.AdressCity}, ${ContactData.AdressStreet}`}
+        width={MapProportion.Width}
+        height={MapProportion.Height}
+      />
+      :
+      <div
+        style={{
+          height: MapProportion.Height,
+          width: MapProportion.Width,
+          position: 'absolute',
+          display: 'block'
+        }}
+        ref={mapRef}
+      />
+    }
+    </>
   );
 };
 

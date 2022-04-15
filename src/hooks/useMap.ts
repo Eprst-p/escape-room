@@ -1,6 +1,6 @@
 import {useEffect, useState, MutableRefObject, useCallback} from 'react';
 import {Map, Marker} from 'leaflet';
-import {Pin} from '../settings/map-settings';
+import {pin} from '../settings/map-settings';
 import leaflet from 'leaflet'
 import { Coordinates } from '../settings/map-settings';
 
@@ -38,7 +38,7 @@ function useMap(
       lat: Coordinates.Latitude,
       lng: Coordinates.Longitude
     });
-    marker.setIcon(Pin).addTo(viewedMap)
+    marker.setIcon(pin).addTo(viewedMap);
   }, []);
 
   useEffect(() => {
