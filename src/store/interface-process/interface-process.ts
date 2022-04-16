@@ -1,6 +1,6 @@
 import {createSlice} from '@reduxjs/toolkit';
 import {NameSpace} from '../../settings/name-space';
-import { QuestTheme } from '../../settings/quest-themes';
+import { QuestTheme } from '../../settings/quest-theme-settings';
 import {InterfaceProcess} from '../../types/state';
 
 

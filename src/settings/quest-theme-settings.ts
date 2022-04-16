@@ -7,7 +7,7 @@ export enum QuestTheme {
   SciFi = 'sci-fi',
 }
 
-export const questTypes = ['allQuests', 'adventures', 'horror', 'mystic', 'detective', 'sci-fi'];
+export const questTypes = ['allQuests', 'adventures', 'horror', 'mystic', 'detective', 'sci-fi'] as const;
 
 export const themeNames = {
   allQuests: 'Все квесты',
@@ -16,4 +16,4 @@ export const themeNames = {
   mystic: 'Мистика',
   detective: 'Детектив',
   'sci-fi': 'Sci-fi',
-};
+} as const;

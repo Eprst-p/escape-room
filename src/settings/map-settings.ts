@@ -7,7 +7,7 @@ export const Coordinates: CoordinatesType = {
   Zoom: 17,
 } as const;
 
-export const pin = new Icon({
+export const Pin = new Icon({
   iconUrl: '/img/pin.svg',
   iconSize: [25, 35],
   iconAnchor: [20, 35]

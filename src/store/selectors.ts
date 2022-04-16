@@ -1,6 +1,6 @@
 import {State} from '../types/state'
 import {createSelector} from 'reselect';
-import { QuestTheme } from '../settings/quest-themes';
+import { QuestTheme } from '../settings/quest-theme-settings';
 
 export const getAllQuests = (state:State) => state.DATA.quests;
 export const getQuest = (state:State) => state.DATA.quest;

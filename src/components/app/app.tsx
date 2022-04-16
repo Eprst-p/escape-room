@@ -6,7 +6,7 @@ import NotFound404 from '../not-found/not-found';
 import { appTheme } from './common';
 import * as S from './app.styled';
 import React from 'react';
-import { AppRoute } from '../../settings/app-routes';
+import { AppRoute } from '../../settings/app-route';
 import LoadingScreen from '../loading-screen/loading-screen';
 import { useAppSelector } from '../../hooks/redux-hooks';
 import { getIsDataLoaded } from '../../store/selectors';

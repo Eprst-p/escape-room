@@ -1,6 +1,6 @@
 import {createAsyncThunk} from '@reduxjs/toolkit';
 import { QuestType, QuestTypes } from '../types/quest-type';
-import { ApiRoute } from '../settings/api-routes';
+import { ApiRoute } from '../settings/api-route';
 import { loadQuest, loadQuests } from './data-process/data-process';
 import { api, store } from '.';
 import { generatePath } from 'react-router-dom';
@@ -8,7 +8,7 @@ import { OrderType } from '../types/order-type';
 import { errorHandle } from '../services/error-handle';
 import { setBookingModalStatus } from './interface-process/interface-process';
 import { redirectToRoute } from './action';
-import { AppRoute } from '../settings/app-routes';
+import { AppRoute } from '../settings/app-route';
 
 const setPromiseWaiter = (timer = 300) => new Promise(resolve => setTimeout(resolve, timer));
 

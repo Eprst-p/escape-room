@@ -1,7 +1,7 @@
 import logo from 'assets/img/logo.svg';
 import { memo } from 'react';
 import { useLocation } from 'react-router-dom';
-import { AppRoute } from '../../../settings/app-routes';
+import { AppRoute } from '../../../settings/app-route';
 import { ContactData } from '../../../settings/contact-data';
 import * as S from './header.styled';
 

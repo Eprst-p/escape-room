@@ -7,14 +7,14 @@ import {ReactComponent as IconScifi} from 'assets/img/icon-scifi.svg';
 import {ReactComponent as IconPerson} from 'assets/img/icon-person.svg';
 import {ReactComponent as IconPuzzle} from 'assets/img/icon-puzzle.svg';
 import * as S from './quests-catalog.styled';
-import { questTypes, themeNames } from 'settings/quest-themes';
+import { questTypes, themeNames } from 'settings/quest-theme-settings';
 import { useAppDispatch, useAppSelector } from 'hooks/redux-hooks';
 import { getActiveTheme, getQuestsByTheme } from 'store/selectors';
 import { generatePath} from 'react-router-dom';
 import { hardLvls } from 'settings/quest-hard-lvls';
-import { QuestTheme } from 'settings/quest-themes';
+import { QuestTheme } from 'settings/quest-theme-settings';
 import { changeTheme } from 'store/interface-process/interface-process';
-import { AppRoute } from 'settings/app-routes';
+import { AppRoute } from 'settings/app-route';
 
 
 const themeIcons = {
