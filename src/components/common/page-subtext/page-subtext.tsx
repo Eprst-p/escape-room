@@ -4,7 +4,6 @@ type PageSubtextProps = {
   children: string;
 }
 
-
 const PageSubtext = ({ children, ...props }: PageSubtextProps) => (
   <S.PageSubtext {...props}>{children}</S.PageSubtext>
 );

@@ -7,13 +7,9 @@ import {
 import { QuestsCatalog } from './components/components';
 import * as S from './home.styled';
 import React from 'react';
-import { useAppSelector } from '../../hooks/redux-hooks';
-import { getAllQuests } from '../../store/selectors';
 
 
-const HomePage = () => {
-
-  return (
+const HomePage = () => (
     <MainLayout>
       <S.Main forwardedAs="main">
         <PageHeading>
@@ -23,7 +19,6 @@ const HomePage = () => {
         <QuestsCatalog />
       </S.Main>
     </MainLayout>
-  )
-};
+);
 
 export default HomePage;

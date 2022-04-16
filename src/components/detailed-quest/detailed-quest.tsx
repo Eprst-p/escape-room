@@ -14,8 +14,6 @@ import LoadingScreen from '../loading-screen/loading-screen';
 import { getBookingModalStatus } from '../../store/selectors';
 import { setBookingModalStatus } from '../../store/interface-process/interface-process';
 import { QuestType } from '../../types/quest-type';
-import { redirectToRoute } from '../../store/action';
-import { AppRoute } from '../../settings/app-routes';
 
 
 const DetailedQuest = () => {

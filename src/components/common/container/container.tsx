@@ -5,7 +5,6 @@ type ContainerProps = {
   children: JSX.Element[];
 }
 
-
 const Container = ({ children, ...props }: ContainerProps) => (
   <S.Container {...props}>{children}</S.Container>
 );

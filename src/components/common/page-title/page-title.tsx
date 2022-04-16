@@ -4,7 +4,6 @@ type PageTitleProps = {
   children: string;
 }
 
-
 const PageTitle = ({ children, ...props } :PageTitleProps) => (
   <S.PageTitle {...props}>{children}</S.PageTitle>
 );

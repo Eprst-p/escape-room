@@ -7,10 +7,6 @@ import { fetchQuests } from './store/api-actions';
 import {ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-
-import { useAppSelector } from './hooks/redux-hooks';
-import { getAllQuests } from './store/selectors';
-
 store.dispatch(fetchQuests());
 
 

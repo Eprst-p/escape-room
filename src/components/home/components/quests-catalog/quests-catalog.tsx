@@ -10,8 +10,7 @@ import * as S from './quests-catalog.styled';
 import { questTypes, themeNames } from 'settings/quest-themes';
 import { useAppDispatch, useAppSelector } from 'hooks/redux-hooks';
 import { getActiveTheme, getQuestsByTheme } from 'store/selectors';
-import { ApiRoute } from 'settings/api-routes';
-import { generatePath, useLocation, useParams } from 'react-router-dom';
+import { generatePath} from 'react-router-dom';
 import { hardLvls } from 'settings/quest-hard-lvls';
 import { QuestTheme } from 'settings/quest-themes';
 import { changeTheme } from 'store/interface-process/interface-process';
@@ -29,13 +28,10 @@ const themeIcons = {
 
 const QuestsCatalog = () => {
   const dispatch = useAppDispatch();
-
   const activeTheme = useAppSelector(getActiveTheme);
   const quests = useAppSelector(getQuestsByTheme);
 
   const handleOnThemeClick = (theme: string) => dispatch(changeTheme(theme));
-
- // isActive - пока хрен знает как пофиксить типы
 
   return (
     <>

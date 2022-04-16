@@ -8,11 +8,6 @@ import { orderAction } from '../../../../store/api-actions';
 import { FormEvent, useMemo, useRef, useState } from 'react';
 
 
-import {ToastContainer} from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
-
-
 type PropretyReviewProps = {
   peopleCount: number[];
 }
@@ -117,8 +112,6 @@ const BookingModal = ({peopleCount} : PropretyReviewProps) => {
     if (checkValidation()) {
       const data = createOrderData();
       dispatch(orderAction(data))
-      // .then(() => dispatch(setBookingModalStatus(false)))
-      // .catch(() => dispatch(setBookingModalStatus(true)))
     }
   }
 
