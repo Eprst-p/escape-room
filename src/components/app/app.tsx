@@ -1,9 +1,4 @@
 import { ThemeProvider } from 'styled-components';
-import {
-  Switch,
-  Route,
-  BrowserRouter as Router,
-} from 'components/common/common';
 import DetailedQuest from 'components/detailed-quest/detailed-quest';
 import Contacts from 'components/contacts/contacts';
 import Home from 'components/home/home';
@@ -15,11 +10,13 @@ import { AppRoute } from '../../settings/app-routes';
 import LoadingScreen from '../loading-screen/loading-screen';
 import { useAppSelector } from '../../hooks/redux-hooks';
 import { getIsDataLoaded } from '../../store/selectors';
+import HistoryRouter from '../history-route/history-route';
+import browserHistory from '../../browser-history/browser-history';
+import { Routes, Route } from 'react-router-dom';
 
 
 const App = () => {
   const isDataLoaded = useAppSelector(getIsDataLoaded);
-
 
   if (!isDataLoaded) {
     return (
@@ -28,25 +25,29 @@ const App = () => {
   }
 
   return (
-    <ThemeProvider theme={appTheme}>
-      <S.GlobalStyle />
-      <Router>
-        <Switch>
-          <Route exact path={AppRoute.Quest}>
-            <DetailedQuest />
-          </Route>
-          <Route exact path={AppRoute.Contacts}>
-            <Contacts />
-          </Route>
-          <Route exact path={AppRoute.Catalog}>
-            <Home />
-          </Route>
-          <Route exact path="*">
-            <NotFound404 />
-          </Route>
-        </Switch>
-      </Router>
-    </ThemeProvider>
+    <HistoryRouter history={browserHistory}>
+      <ThemeProvider theme={appTheme}>
+        <S.GlobalStyle />
+        <Routes>
+          <Route
+            path={AppRoute.Catalog}
+            element={<Home />}
+          />
+          <Route
+            path={AppRoute.Quest}
+            element={<DetailedQuest />}
+          />
+          <Route
+            path={AppRoute.Contacts}
+            element={<Contacts />}
+          />
+          <Route
+            path="*"
+            element={<NotFound404 />}
+          />
+        </Routes>
+      </ThemeProvider>
+    </HistoryRouter >
   );
 };
 

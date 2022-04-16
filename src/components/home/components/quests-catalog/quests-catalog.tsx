@@ -17,6 +17,7 @@ import { QuestTheme } from 'settings/quest-themes';
 import { changeTheme } from 'store/interface-process/interface-process';
 import { AppRoute } from 'settings/app-routes';
 
+
 const themeIcons = {
   [QuestTheme.AllQuests]: <IconAllQuests />,
   [QuestTheme.Adventures]: <IconAdventures />,
